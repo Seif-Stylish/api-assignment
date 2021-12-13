@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>api categories</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/fontawesome.min.css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <body>
+
+            <div class="m-auto bg-warning p-5" style="width: 80%;">
+                <h2 class="text-center">our news</h2>
+                <div class="row">
+                    {{#each allData}}
+                        <div class="col-xl-4">
+                            <div class="allApiData my-3">
+                                <img src="{{this.urlToImage}}" class="img-fluid w-100 h-50" alt="image not found">
+                                <div class="p-2 bg-white">
+                                    <p class="mt-2 titleParagraph">${{this.title}}</p>
+                                    <p class="mt-2 descriptionParagraph">${{this.description}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-3"></div>
+                    {{/each}}
+                </div>
+            </div>
+            
+            <!--<h2 class="text-primary">{{allData}}</h2>-->
+
+
+        <script src="js/jquery-3.5.1.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="/js/app.js"></script>
+        </body>
+    </head>
+</html>
